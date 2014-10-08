@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="base.css"/>
+    <script>
+
+        // AJAX - asynchronous javascript and xml
+        // scripted http
+        // JSON = javascript object notation
+
+        // https://developer.github.com/v3/
+        // https://api.github.com  - use this link to access information from github
+
+
+        // https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
+
+
+
+
+    </script>
+</head>
+<body>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest">Reference for XMLHttpRequest</a>
+    <input type="text" id="search_term" value="angularjs" placeholder="enter repository name ... "/>
+    <button>Search Github</button>
+    <div id="results">
+        <ul id="results_ul">
+        </ul>  
+    </div>
+    <script>
+        // get access to the input element
+        // get access to the button element
+
+        // add an event listener on the button
+        // read the input element's value and print it to console
+
+        var inp = document.getElementsByTagName('input')[0];
+        var div = document.getElementById('results');
+        var results = document.getElementById('results_ul');
+        document.getElementsByTagName('button')[0].addEventListener('click', function () {
+            console.log('button clicked ... ');
+            var search_term = inp.value; // extracts the input value and stores it in a string called search_term
+
+            // AJAX Call
+
+            /**
+             *
+             * 1. Create an XMLHttpRequest
+             * 2. Open the request - provide the HTTP verb and the URL
+             * 3. Add an event listener for 'readystatechange'
+             * 4. send the request
+             *
+             * */
+
+
+            var xhr = new XMLHttpRequest();
+            xhr.open('GET', 'https://api.github.com/search/repositories?q=' + search_term);
+            xhr.addEventListener('readystatechange', function () {
+                // run this function every time the readyState changes
+                console.log(xhr.readyState);
+                if ( xhr.readyState === 4 ) {
+                    // console.log(xhr.responseText);
+                    // convert the string (JSON) into a javascript object
+                    var obj = JSON.parse(xhr.responseText);
+                    console.log(obj);
+                    // div.innerHTML = 'Total number of repositories found: ' + obj.total_count;
+                    
+                    // create a new li element for the repository
+                    // li.innerHTML = repository name
+                    // append the li element to the ul element
+
+                    for (var i = 0, len = obj.items.length; i < len; i++) {
+                        var li = document.createElement('li');
+                        results.appendChild(li);
+                        li.innerHTML = obj.items[i].full_name;
+                    }
+                }
+            });
+            xhr.send();
+
+
+
+        });
+    </script>
+</body>
+</html>
