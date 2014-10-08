@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Fade In</title>
+    <style>
+        div.square {
+            height: 10em;
+            width: 10em;
+            background-color: #2a3a48;
+            display: none;
+        }
+
+        div.show {
+            display: block;
+            opacity: 0;
+        }
+
+        div.visible {
+            opacity: 1;
+            transition: opacity 1000ms ease;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+
+            var mydiv = document.getElementById('mydiv');
+
+            document.getElementsByTagName('button')[0].addEventListener('click', function () {
+                console.log('button was clicked ... ');
+
+                // mydiv.className = 'square move';
+
+                // code for the toggle statement
+                if ( mydiv.className === 'square' ) {
+                    mydiv.className = 'square show';
+
+                    setTimeout(function () {
+                        mydiv.className += ' visible';
+                    }, 100);
+
+                } else {
+                    mydiv.className = 'square';
+                }
+
+
+            });
+
+        });
+    </script>
+</head>
+<body>
+<button>
+    Toggle Position
+</button>
+<hr/>
+<div id="mydiv" class="square">
+
+</div>
+</body>
+</html>

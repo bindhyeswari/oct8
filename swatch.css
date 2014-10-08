@@ -1,0 +1,187 @@
+@import url(base.css);
+body {
+  -webkit-smooting: anti-alias; }
+
+#container {
+  width: 75vmin;
+  height: 75vmin;
+  margin: 0 auto;
+  position: relative; }
+
+.swatch {
+  position: absolute;
+  height: 40%;
+  width: 15%;
+  background-color: red;
+  border-radius: 0.25em;
+  top: 0;
+  left: 43.5%;
+  transform-origin: 50% 125%;
+  box-shadow: 0 0 12px 8px rgba(50, 50, 50, 0.25); }
+
+@keyframes swatch1frame {
+  0% {
+    background-color: #6a6400;
+    transform: rotate(-8deg); }
+  100% {
+    background-color: #646a00;
+    transform: rotate(24deg); } }
+.swatch:nth-child(1) {
+  animation: swatch1frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch2frame {
+  0% {
+    background-color: #706400;
+    transform: rotate(-16deg); }
+  100% {
+    background-color: #647000;
+    transform: rotate(48deg); } }
+.swatch:nth-child(2) {
+  animation: swatch2frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch3frame {
+  0% {
+    background-color: #766400;
+    transform: rotate(-24deg); }
+  100% {
+    background-color: #647600;
+    transform: rotate(72deg); } }
+.swatch:nth-child(3) {
+  animation: swatch3frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch4frame {
+  0% {
+    background-color: #7c6400;
+    transform: rotate(-32deg); }
+  100% {
+    background-color: #647c00;
+    transform: rotate(96deg); } }
+.swatch:nth-child(4) {
+  animation: swatch4frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch5frame {
+  0% {
+    background-color: #826400;
+    transform: rotate(-40deg); }
+  100% {
+    background-color: #648200;
+    transform: rotate(120deg); } }
+.swatch:nth-child(5) {
+  animation: swatch5frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch6frame {
+  0% {
+    background-color: #886400;
+    transform: rotate(-48deg); }
+  100% {
+    background-color: #648800;
+    transform: rotate(144deg); } }
+.swatch:nth-child(6) {
+  animation: swatch6frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch7frame {
+  0% {
+    background-color: #8e6400;
+    transform: rotate(-56deg); }
+  100% {
+    background-color: #648e00;
+    transform: rotate(168deg); } }
+.swatch:nth-child(7) {
+  animation: swatch7frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch8frame {
+  0% {
+    background-color: #946400;
+    transform: rotate(-64deg); }
+  100% {
+    background-color: #649400;
+    transform: rotate(192deg); } }
+.swatch:nth-child(8) {
+  animation: swatch8frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch9frame {
+  0% {
+    background-color: #9a6400;
+    transform: rotate(-72deg); }
+  100% {
+    background-color: #649a00;
+    transform: rotate(216deg); } }
+.swatch:nth-child(9) {
+  animation: swatch9frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch10frame {
+  0% {
+    background-color: #a06400;
+    transform: rotate(-80deg); }
+  100% {
+    background-color: #64a000;
+    transform: rotate(240deg); } }
+.swatch:nth-child(10) {
+  animation: swatch10frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch11frame {
+  0% {
+    background-color: #a66400;
+    transform: rotate(-88deg); }
+  100% {
+    background-color: #64a600;
+    transform: rotate(264deg); } }
+.swatch:nth-child(11) {
+  animation: swatch11frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch12frame {
+  0% {
+    background-color: #ac6400;
+    transform: rotate(-96deg); }
+  100% {
+    background-color: #64ac00;
+    transform: rotate(288deg); } }
+.swatch:nth-child(12) {
+  animation: swatch12frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch13frame {
+  0% {
+    background-color: #b26400;
+    transform: rotate(-104deg); }
+  100% {
+    background-color: #64b200;
+    transform: rotate(312deg); } }
+.swatch:nth-child(13) {
+  animation: swatch13frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch14frame {
+  0% {
+    background-color: #b86400;
+    transform: rotate(-112deg); }
+  100% {
+    background-color: #64b800;
+    transform: rotate(336deg); } }
+.swatch:nth-child(14) {
+  animation: swatch14frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+@keyframes swatch15frame {
+  0% {
+    background-color: #be6400;
+    transform: rotate(-120deg); }
+  100% {
+    background-color: #64be00;
+    transform: rotate(360deg); } }
+.swatch:nth-child(15) {
+  animation: swatch15frame 2s cubic-bezier(0.33, -0.58, 0, 1.28);
+  animation-fill-mode: forwards; }
+
+/*# sourceMappingURL=swatch.css.map */
